@@ -1,0 +1,17 @@
+{
+    "validate": true,
+    "required_columns": [
+        "Location", "Date_Time", "Temperature_C", 
+        "Humidity_pct", "Precipitation_mm", "Wind_Speed_kmh"
+    ],
+    "remove_missing": true,
+    "correction": true,
+    "correction_method": "removal",
+    "validation_ranges": {
+        "Temperature_C": { "min": -100, "max": 100 },
+        "Humidity_pct": { "min": 0, "max": 100 },
+        "Precipitation_mm": { "min": 0, "max": null },
+        "Wind_Speed_kmh": { "min": 0, "max": null }
+    },
+    "cleaned_data_file": "data/data_cleaned.csv"
+}
